@@ -5,10 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./public/css/main.css">
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
 </head>
 <body>
   <div class="wrapper">
-    <div class="h"></div>
+   <!-- menu -->
+    <div class="menu">
+      <nav>
+        <div><a href="#">home</a></div>
+        <div><a href="#">contact</a></div>
+        <div><a href="#">gallery</a></div>
+        <div><a href="#">about</a></div>
+      </nav>
+      <div class="close">&times;</div>
+    </div>
+    
+    <div class="hamber">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+   <!--end menu -->
   </div>
+  <script>
+    let hamber=document.querySelector(".hamber")
+    hamber.addEventListener("click",function(){
+     document.querySelector(".menu").style.left=0
+    })
+   
+    let closeMenu=document.querySelector(".close")
+    closeMenu.addEventListener("click",function(){
+      document.querySelector(".menu").style.left="-100%"
+    }
+    )
+  </script>
+
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
