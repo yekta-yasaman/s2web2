@@ -26,8 +26,47 @@
       <div></div>
     </div>
    <!--end menu -->
+   <!-- slider -->
+    <div class="slider">
+   <div class=" swiper mySlider">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide"><img src="./public/images/img4.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./public/images/images2.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./public/images/img3.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./public/images/img1.jpg" alt=""></div>
+      
+     
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
+</div>
+   <!--  end slider -->
+  </div>
+  
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
   <script>
+    var swiper = new Swiper(".mySlider", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <script>
+    
     let hamber=document.querySelector(".hamber")
     hamber.addEventListener("click",function(){
      document.querySelector(".menu").style.left=0
@@ -38,8 +77,8 @@
       document.querySelector(".menu").style.left="-100%"
     }
     )
+  
   </script>
 
-  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
